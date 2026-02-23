@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        html, body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            font-family: "Times New Roman", Times, serif;
+        }
+        body {
+            padding: 0 50px 100px 50px;
+            display: block;
+            min-width: max-content;
+        }
+
+        #nav-ui {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background: white;
+            padding: 25px 0;
+            z-index: 1000;
+            width: 100%;
+        }
+        
+        .nav-btn {
+            background: none;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            margin-right: 12px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        .nav-btn.active {
+            background: #000;
+            color: #fff;
+            border-color: #000;
+        }
+
+        .section {
+            display: none;
+            margin-top: 50px;
+        }
+        .section.active {
+            display: block;
+        }
+
+        .formula-container {
+            margin-bottom: 150px;
+            display: block;
+        }
+
+        mjx-container[display="true"] {
+            text-align: left !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="nav-ui">
+        <button class="nav-btn active" onclick="showSection('algebra', this)">Equations & Roots</button>
+        <button class="nav-btn" onclick="showSection('calculus', this)">Calculus & Differential</button>
+        <button class="nav-btn" onclick="showSection('numbertheory', this)">Number Theory & Diophantine</button>
+        <button class="nav-btn" onclick="showSection('series', this)">Series & Limits</button>
+    </div>
+
+    <div id="algebra" class="section active">
+        <div class="formula-container">\[ ax + b = 0 \implies x = -\frac{b}{a} \]</div>
+        <div class="formula-container">\[ ax^2 + bx + c = 0 \implies x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]</div>
+        <div class="formula-container">\[ ax^3 + bx^2 + cx + d = 0 \implies x = \sqrt[3]{\frac{-2b^3 + 9abc - 27a^2d}{54a^3} + \sqrt{\frac{(2b^3 - 9abc + 27a^2d)^2}{2916a^6} + \frac{(3ac - b^2)^3}{729a^6}}} + \sqrt[3]{\frac{-2b^3 + 9abc - 27a^2d}{54a^3} - \sqrt{\frac{(2b^3 - 9abc + 27a^2d)^2}{2916a^6} + \frac{(3ac - b^2)^3}{729a^6}}} - \frac{b}{3a} \]</div>
+        <div class="formula-container">
+            \[ ax^4 + bx^3 + cx^2 + dx + e = 0 \]
+            \[ x = -\frac{b}{4a} - \frac{1}{2}\sqrt{\frac{b^2}{4a^2} - \frac{2c}{3a} + \frac{\sqrt[3]{2}(c^2 - 3bd + 12ae)}{3a\sqrt[3]{2(2c^3 - 9bcd + 27ad^2 + 27b^2e - 72ace) + \sqrt{4(2c^3 - 9bcd + 27ad^2 + 27b^2e - 72ace)^2 - 4(c^2 - 3bd + 12ae)^3}}} + \frac{\sqrt[3]{2(2c^3 - 9bcd + 27ad^2 + 27b^2e - 72ace) + \sqrt{4(2c^3 - 9bcd + 27ad^2 + 27b^2e - 72ace)^2 - 4(c^2 - 3bd + 12ae)^3}}}{3\sqrt[3]{2}a}} - \frac{1}{2}\sqrt{\frac{b^2}{2a^2} - \frac{4c}{3a} - \frac{\sqrt[3]{2}(c^2 - 3bd + 12ae)}{3a\sqrt[3]{2(2c^3 - 9bcd + 27ad^2 + 27b^2e - 72ace) + \sqrt{4(2c^3 - 9bcd + 27ad^2 + 27b^2e - 72ace)^2 - 4(c^2 - 3bd + 12ae)^3}}} - \frac{\sqrt[3]{2(2c^3 - 9bcd + 27ad^2 + 27b^2e - 72ace) + \sqrt{4(2c^3 - 9bcd + 27ad^2 + 27b^2e - 72ace)^2 - 4(c^2 - 3bd + 12ae)^3}}}{3\sqrt[3]{2}a} - \frac{-\frac{b^3}{a^3} + \frac{4bc}{a^2} - \frac{8d}{a}}{4\sqrt{\frac{b^2}{4a^2} - \frac{2c}{3a} + \frac{\sqrt[3]{2}(c^2 - 3bd + 12ae)}{3a\sqrt[3]{2(2c^3 - 9bcd + 27ad^2 + 27b^2e - 72ace) + \sqrt{4(2c^3 - 9bcd + 27ad^2 + 27b^2e - 72ace)^2 - 4(c^2 - 3bd + 12ae)^3}}} + \frac{\sqrt[3]{2(2c^3 - 9bcd + 27ad^2 + 27b^2e - 72ace) + \sqrt{4(2c^3 - 9bcd + 27ad^2 + 27b^2e - 72ace)^2 - 4(c^2 - 3bd + 12ae)^3}}}{3\sqrt[3]{2}a}}}} \]
+        </div>
+        <div class="formula-container">
+            \[ \sin x = a \]
+            \[ x = k\pi + (-1)^k \arcsin a \quad (k \in \mathbb{Z}) \]
+            \[ x = -i \ln(ia \pm \sqrt{1-a^2}) \]
+        </div>
+        <div class="formula-container">
+            \[ x^n + 1 = 0 \]
+            \[ x_k = e^{i\frac{(2k+1)\pi}{n}} \quad (k = 0, 1, 2, \dots, n-1) \]
+            \[ x_k = \cos\frac{(2k+1)\pi}{n} + i\sin\frac{(2k+1)\pi}{n} \quad (k = 0, 1, 2, \dots, n-1) \]
+        </div>
+    </div>
+
+    <div id="calculus" class="section">
+        <div class="formula-container">
+            \[ I_n = \int \frac{1}{x^n + 1} dx \]
+            \[ J_n = \int \frac{1}{x^n - 1} dx \]
+            \[ I_{2n+1} = \frac{1}{2n+1} \left[ \ln|x+1| + 2\sum_{k=1}^n \sin\left(\frac{(2k-1)\pi}{2n+1}\right) \arctan\left(x \csc\frac{(2k-1)\pi}{2n+1} - \cot\frac{(2k-1)\pi}{2n+1}\right) - \sum_{k=1}^n \cos\left(\frac{(2k-1)\pi}{2n+1}\right) \ln\left(x^2 - 2x\cos\frac{(2k-1)\pi}{2n+1} + 1\right) \right] + C \]
+            \[ I_{2n} = \frac{1}{2n} \left[ 2\sum_{k=1}^n \sin\left(\frac{(2k-1)\pi}{2n}\right) \arctan\left(x \csc\frac{(2k-1)\pi}{2n} - \cot\frac{(2k-1)\pi}{2n}\right) - \sum_{k=1}^n \cos\left(\frac{(2k-1)\pi}{2n}\right) \ln\left(x^2 - 2x\cos\frac{(2k-1)\pi}{2n} + 1\right) \right] + C \]
+            \[ J_{2n+1} = \frac{1}{2n+1} \left[ \ln|x-1| + \sum_{k=1}^n \cos\left(\frac{2k\pi}{2n+1}\right) \ln\left(x^2 - 2x\cos\frac{2k\pi}{2n+1} + 1\right) - 2\sum_{k=1}^n \sin\left(\frac{2k\pi}{2n+1}\right) \arctan\left(x \csc\frac{2k\pi}{2n+1} - \cot\frac{2k\pi}{2n+1}\right) \right] + C \]
+            \[ J_{2n} = \frac{1}{2n} \left[ \ln\left|\frac{x-1}{x+1}\right| + \sum_{k=1}^{n-1} \cos\left(\frac{k\pi}{n}\right) \ln\left(x^2 - 2x\cos\frac{k\pi}{n} + 1\right) - 2\sum_{k=1}^{n-1} \sin\left(\frac{k\pi}{n}\right) \arctan\left(x \csc\frac{k\pi}{n} - \cot\frac{k\pi}{n}\right) \right] + C \]
+        </div>
+        <div class="formula-container">
+            \[ \int x^m (\ln x)^n dx = \sum_{k=0}^n \frac{(-1)^k \cdot n!}{(n-k)! \cdot (m+1)^{k+1}} x^{m+1} (\ln x)^{n-k} + C \]
+        </div>
+        <div class="formula-container">
+            \[ \int x^n e^{ax} dx = \frac{e^{ax}}{a} \sum_{k=0}^n (-1)^k \frac{n!}{(n-k)!a^k} x^{n-k} + C \]
+        </div>
+        <div class="formula-container">
+            \[ \int e^{ax} \sin(bx) dx = \frac{e^{ax}}{a^2 + b^2}(a \sin bx - b \cos bx) + C \]
+        </div>
+        <div class="formula-container">
+            \[ \int (\arcsin x)^n \, dx = x \sum_{k=0}^{\lfloor n/2 \rfloor} \frac{(-1)^k n!}{(n-2k)!} (\arcsin x)^{n-2k} + \sqrt{1-x^2} \sum_{k=0}^{\lfloor (n-1)/2 \rfloor} \frac{(-1)^k n!}{(n-2k-1)!} (\arcsin x)^{n-2k-1} + C \]
+        </div>
+        <div class="formula-container">\[ y' + p(x)y = q(x) \]\[ y = e^{-\int p(x)dx} \left( \int q(x)e^{\int p(x)dx} dx + C \right) \]</div>
+        <div class="formula-container">\[ y' + p(x)y = q(x)y^n \]\[ y = \left( e^{-(1-n)\int p(x)dx} \left( (1-n)\int q(x)e^{(1-n)\int p(x)dx} dx + C \right) \right)^{\frac{1}{1-n}} \]</div>
+        <div class="formula-container">\[ ay'' + by' + cy = 0 \]\[ y = C_1 e^{\frac{-b + \sqrt{b^2 - 4ac}}{2a}x} + C_2 e^{\frac{-b - \sqrt{b^2 - 4ac}}{2a}x} \]</div>
+        <div class="formula-container">\[ x^2y'' + axy' + by = 0 \]\[ y = C_1 x^{\frac{1-a + \sqrt{(a-1)^2 - 4b}}{2}} + C_2 x^{\frac{1-a - \sqrt{(a-1)^2 - 4b}}{2}} \]</div>
+    </div>
+
+    <div id="numbertheory" class="section">
+        <div class="formula-container">
+            \[ \begin{cases} a_1x + b_1y + c_1z = d_1 \\ a_2x + b_2y + c_2z = d_2 \\ a_3x + b_3y + c_3z = d_3 \end{cases} \]
+            \[ x = \frac{d_1(b_2c_3 - b_3c_2) + b_1(c_2d_3 - c_3d_2) + c_1(d_2b_3 - d_3b_2)}{a_1(b_2c_3 - b_3c_2) + b_1(c_2a_3 - c_3a_2) + c_1(a_2b_3 - a_3b_2)} \]
+            \[ y = \frac{a_1(d_2c_3 - d_3c_2) + d_1(c_2a_3 - c_3a_2) + c_1(a_2d_3 - a_3d_2)}{a_1(b_2c_3 - b_3c_2) + b_1(c_2a_3 - c_3a_2) + c_1(a_2b_3 - a_3b_2)} \]
+            \[ z = \frac{a_1(b_2d_3 - b_3d_2) + b_1(d_2a_3 - d_3a_2) + d_1(a_2b_3 - a_3b_2)}{a_1(b_2c_3 - b_3c_2) + b_1(c_2a_3 - c_3a_2) + c_1(a_2b_3 - a_3b_2)} \]
+        </div>
+        <div class="formula-container">\[ ax + by = c \]\[ \left\{ \begin{array}{l} x = x_0 + \frac{b}{\gcd(a,b)}n \\ y = y_0 - \frac{a}{\gcd(a,b)}n \end{array} \right. \]</div>
+        <div class="formula-container">
+            \[ \begin{cases} px + qy = a \\ rxy = b \end{cases} \]
+            \[ \left\{ \begin{array}{l} x = \frac{a \pm \sqrt{a^2 - \frac{4pqb}{r}}}{2p} \\ y = \frac{a \mp \sqrt{a^2 - \frac{4pqb}{r}}}{2q} \end{array} \right. \]
+        </div>
+        <div class="formula-container">
+            \[ \begin{cases} x^2 + y^2 = p \\ x + y = q \end{cases} \]
+            \[ \left\{ \begin{array}{l} x = \frac{q \pm \sqrt{2p - q^2}}{2} \\ y = \frac{q \mp \sqrt{2p - q^2}}{2} \end{array} \right. \]
+        </div>
+        <div class="formula-container">\[ x^2 + y^2 = z^2 \]\[ \left\{ \begin{array}{l} x = m^2 - n^2 \\ y = 2mn \\ z = m^2 + n^2 \end{array} \right. \]</div>
+        <div class="formula-container">\[ x^2 + y^2 = z^4 \]\[ \left\{ \begin{array}{l} x = 4mn(m^2 - n^2) \\ y = 6m^2n^2 - m^4 - n^4 \\ z = m^2 + n^2 \end{array} \right. \]</div>
+        <div class="formula-container">
+            \[ x^2 - xy + y^2 = z^2 \]
+            \[ \left\{ \begin{array}{l} x = -m^2 - 2mn + 3n^2 \\ y = -m^2 + 2mn + 3n^2 \\ z = m^2 + 3n^2 \end{array} \right. \quad \left\{ \begin{array}{l} x = 2mn + n^2 \\ y = m^2 + 2mn \\ z = m^2 + mn + n^2 \end{array} \right. \quad \left\{ \begin{array}{l} x = m^2 - n^2 \\ y = m^2 + 2mn \\ z = m^2 + mn + n^2 \end{array} \right. \]
+        </div>
+        <div class="formula-container">\[ w^2 + x^2 + y^2 = z^2 \]\[ \left\{ \begin{array}{l} w = \frac{p^2 + q^2 - r^2}{r} \\ x = 2p \\ y = 2q \\ z = \frac{p^2 + q^2 + r^2}{r} \end{array} \right. \]</div>
+        <div class="formula-container">\[ x^2 + y^2 + z^2 = w^2 \]\[ \left\{ \begin{array}{l} x = a^2 + b^2 - c^2 - d^2 \\ y = 2(bc - ad) \\ z = 2(bd + ac) \\ w = a^2 + b^2 + c^2 + d^2 \end{array} \right. \]</div>
+        <div class="formula-container">\[ \frac{1}{x^2} + \frac{1}{y^2} = \frac{1}{z^2} + \frac{1}{w^2} \]\[ \left\{ \begin{array}{l} x = 4n^4 - 2n^2 \\ y = 2n^2 - 1 \\ z = 2n^3 - n \\ w = 2n^2 \end{array} \right. \]</div>
+        <div class="formula-container">\[ x^2 + py^2 = z^3 \]\[ \left\{ \begin{array}{l} x = m^3 - 3pm n^2 \\ y = 3m^2n - pn^3 \\ z = m^2 + pn^2 \end{array} \right. \]</div>
+        <div class="formula-container">\[ x^3 + y^3 = z^3 + w^3 \]\[ \left\{ \begin{array}{l} x = 1 - (m - 3n)(m^2 + 3n^2) \\ y = (m + 3n)(m^2 + 3n^2) - 1 \\ z = (m + 3n) - (m^2 + 3n^2)^2 \\ w = (m^2 + 3n^2)^2 - (m - 3n) \end{array} \right. \]</div>
+        <div class="formula-container">
+            \[ x^3 + y^3 + z^3 = w^3 \]
+            \[ \left\{ \begin{array}{l} x = 3m^2 + 5mn - 5n^2 \\ y = 4m^2 - 4mn + 6n^2 \\ z = 5m^2 - 5mn - 3n^2 \\ w = 6m^2 - 4mn + 4n^2 \end{array} \right. \quad \left\{ \begin{array}{l} x = 3ab^6d^2 - ac^2 - 9a^4cd - 21a^7d^2 \\ y = ac^2 + 9a^4cd - 6ab^3cd + 21a^7d^2 - 27a^4b^3d^2 + 6ab^6d^2 \\ z = bc^2 + 12a^3bcd - 3b^4cd + 33a^6bd^2 - 18a^3b^4d^2 + 3b^7d^2 \\ w = bc^2 + 6a^3bcd - 3b^4cd + 6a^6bd^2 - 9a^3b^4d^2 + 3b^7d^2 \end{array} \right. \quad \left\{ \begin{array}{l} x = ab^6c^2 + 9a^4cd - 3ad^2 - 7a^7c^2 \\ y = 7a^7c^2 + 9a^4b^3c^2 + 2ab^6c^2 - 9a^4cd - 6ab^3cd + 3ad^2 \\ z = 2a^6bc^2 + 3a^3b^4c^2 + b^7c^2 - 6a^3bcd - 3b^4cd + 3bd^2 \\ w = 11a^6bc^2 + 6a^3b^4c^2 + b^7c^2 - 12a^3bcd - 3b^4cd + 3bd^2 \end{array} \right. \]
+        </div>
+        <div class="formula-container">\[ x^3 + y^4 + z^5 = w^6 \]\[ \left\{ \begin{array}{l} x = (n^6 - 2)^8 \\ y = (n^6 - 2)^6 \\ z = (n^6 - 2)^5 \\ w = n(n^6 - 2)^4 \end{array} \right. \]</div>
+        <div class="formula-container">
+            \[ x^4 + y^4 = z^4 + w^4 \]
+            \[ \left\{ \begin{array}{l} x = m^7 + m^5n^2 - 2m^3n^4 + 3m^2n^5 + mn^6 \\ y = m^6n - 3m^5n^2 - 2m^4n^3 + m^2n^5 + n^7 \\ z = m^7 + m^5n^2 - 2m^3n^4 - 3m^2n^5 + mn^6 \\ w = m^6n + 3m^5n^2 - 2m^4n^3 + m^2n^5 + n^7 \end{array} \right. \]
+        </div>
+        <div class="formula-container">\[ x^4 + y^4 + z^4 = w^4 \]\[ \left\{ \begin{array}{l} x = 358n^2 - 82n + 3 \\ y = 358n^2 + 82n + 3 \\ z = 224n \\ w = 426n^2 + 15 \end{array} \right. \]</div>
+        <div class="formula-container">
+            \[ x^5 + y^5 + z^5 + u^5 = w^5 \]
+            \[ \left\{ \begin{array}{l} x = 27 \\ y = 84 \\ z = 110 \\ u = 133 \\ w = 144 \end{array} \right. \quad \left\{ \begin{array}{l} x = 55 \\ y = 3183 \\ z = 28969 \\ u = 85282 \\ w = 85359 \end{array} \right. \quad \left\{ \begin{array}{l} x = 14132 \\ y = 2206231 \\ z = 2983002 \\ u = 3455760 \\ w = 4034503 \end{array} \right. \]
+        </div>
+        <div class="formula-container">
+            \[ x^5 + y^5 + z^5 + u^5 + v^5 = w^5 \]
+            \[ \left\{ \begin{array}{l} x = 75m^5 - n^5 \\ y = 25m^5 + n^5 \\ z = -25m^5 + n^5 \\ u = 10m^2n^3 \\ v = 50m^4n \\ w = 75m^5 + n^5 \end{array} \right. \]
+        </div>
+        <div class="formula-container">
+            \[ x^p + y^p = z^{p-1} \]
+            \[ \left\{ \begin{array}{l} x = (n^p + 1)^{p-2} \\ y = n(n^p + 1)^{p-2} \\ z = (n^p + 1)^{p-1} \end{array} \right. \quad \left\{ \begin{array}{l} x = \left(m(m^{p^2-2p} + n^{p^2-2p})\right)^{p-2} \\ y = \left(n(m^{p^2-2p} + n^{p^2-2p})\right)^{p-2} \\ z = \left(m^{p^2-2p} + n^{p^2-2p}\right)^{p-1} \end{array} \right. \]
+        </div>
+        <div class="formula-container">\[ x^x y^y = z^z \quad (n > 0) \]\[ \left\{ \begin{array}{l} x = 2^{2^{n+1}(2^n - n - 1) + 2n} (2^n - 1)^{2^{n+1} - 2} \\ y = 2^{2^{n+1}(2^n - n - 1)} (2^n - 1)^{2^{n+1}} \\ z = 2^{2^{n+1}(2^n - n - 1) + n + 1} (2^n - 1)^{2^{n+1} - 1} \end{array} \right. \]</div>
+        <div class="formula-container">
+            \[ \frac{(x+1)!}{(y+1)!(x-y)!} = \frac{x!}{(y+2)!(x-y-2)!} \quad (n \ge 0, n \in \mathbb{Z}) \]
+            \[ \left\{ \begin{array}{l} x = \frac{\left(\frac{1+\sqrt{5}}{2}\right)^{2n+2} - \left(\frac{1-\sqrt{5}}{2}\right)^{2n+2}}{\sqrt{5}} \cdot \frac{\left(\frac{1+\sqrt{5}}{2}\right)^{2n+3} - \left(\frac{1-\sqrt{5}}{2}\right)^{2n+3}}{\sqrt{5}} - 1 \\ y = \frac{\left(\frac{1+\sqrt{5}}{2}\right)^{2n} - \left(\frac{1-\sqrt{5}}{2}\right)^{2n}}{\sqrt{5}} \cdot \frac{\left(\frac{1+\sqrt{5}}{2}\right)^{2n+3} - \left(\frac{1-\sqrt{5}}{2}\right)^{2n+3}}{\sqrt{5}} - 1 \end{array} \right. \]
+        </div>
+        <div class="formula-container">
+            \[ (x+y+z)(-x+y+z)(x-y+z)(x+y-z) = 16 \]
+            \[ \left\{ \begin{array}{l} x = \frac{5n^4 - 4n^2 + 4}{n^5 - 4n} \\ y = \frac{n^5 - 4n^3 + 20n}{2n^4 - 8} \\ z = \frac{n^2 + 2}{2n} \end{array} \right. \]
+        </div>
+        <div class="formula-container">
+            \[ x^{x^y} = y \]
+            \[ \left\{ \begin{array}{l} x = \frac{1}{16} \\ y = \frac{1}{2} \end{array} \right. \quad \left\{ \begin{array}{l} x = \frac{1}{16} \\ y = \frac{1}{4} \end{array} \right. \quad \left\{ \begin{array}{l} x = \frac{1}{n^n} \\ y = \frac{1}{n} \end{array} \right. \]
+        </div>
+        <div class="formula-container">
+            \[ x^x = y^y \quad (x \ne y) \]
+            \[ \left\{ \begin{array}{l} x = \left( \frac{n}{n+1} \right)^n \\ y = \left( \frac{n}{n+1} \right)^{n+1} \end{array} \right. \]
+        </div>
+        <div class="formula-container">
+            \[ x^y = y^x \quad (x \ne y) \]
+            \[ \left\{ \begin{array}{l} x = \left( 1 + \frac{1}{n} \right)^n \\ y = \left( 1 + \frac{1}{n} \right)^{n+1} \end{array} \right. \]
+        </div>
+        <div class="formula-container">
+            \[ x^y = xy \]
+            \[ \left\{ \begin{array}{l} x = \left( 1 + \frac{1}{n} \right)^n \\ y = 1 + \frac{1}{n} \end{array} \right. \]
+        </div>
+        <div class="formula-container">
+            \[ \begin{cases} x^2 + y^2 = p^2 \\ x^2 + z^2 = q^2 \\ y^2 + z^2 = r^2 \end{cases} \]
+            \[ \left\{ \begin{array}{l} x = (m^2 - n^2) \cdot |16m^2n^2 - (m^2 + n^2)^2| \\ y = 2mn \cdot |4(m^2 - n^2)^2 - (m^2 + n^2)^2| \\ z = 8mn(m^2 - n^2)(m^2 + n^2) \end{array} \right. \]
+        </div>
+        <div class="formula-container">
+            \[ \begin{cases} a + b + c = x + y + z \\ abc = xyz \end{cases} \]
+            \[ \left\{ \begin{array}{l} a = m(-mn + pq) \\ b = n(-mn + pq) \\ c = pq(-m - n + p + q) \\ x = p(-mn + pq) \\ y = q(-mn + pq) \\ z = mn(-m - n + p + q) \end{array} \right. \]
+        </div>
+    </div>
+
+    <div id="series" class="section">
+        <div class="formula-container">
+            \[ (x+y)^n = x^n + nx^{n-1}y + \frac{n(n-1)}{2!}x^{n-2}y^2 + \dots + \frac{n!}{k!(n-k)!}x^{n-k}y^k + \dots + y^n \]
+            \[ (x+y)^n = \sum_{k=0}^n \frac{n!}{k!(n-k)!} x^{n-k} y^k \]
+        </div>
+        <div class="formula-container">
+            \[ \zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s} = \prod_{p \in \text{primes}} \frac{1}{1 - p^{-s}} \]
+            \[ \zeta(2n) = \frac{(-1)^{n+1} B_{2n} (2\pi)^{2n}}{2(2n)!} \]
+        </div>
+        <div class="formula-container">
+            \[ B_n = \sum_{k=0}^{n} \frac{1}{k+1} \sum_{j=0}^{k} (-1)^j \frac{k!}{j!(k-j)!} j^n \]
+        </div>
+        <div class="formula-container">
+            \[ \ln(n!) = n \ln n - n + \frac{1}{2} \ln(2\pi n) + \sum_{k=1}^{\infty} \frac{B_{2k}}{2k(2k-1)n^{2k-1}} \]
+        </div>
+        <div class="formula-container">
+            \[ \sin x = x \prod_{n=1}^{\infty} \left(1 - \frac{x^2}{n^2\pi^2}\right) \]
+        </div>
+        <div class="formula-container">
+            \[ \frac{1}{\pi} = \frac{2\sqrt{2}}{9801} \sum_{k=0}^{\infty} \frac{(4k)!(1103+26390k)}{(k!)^4 396^{4k}} \]
+        </div>
+        <div class="formula-container">
+            \[ \pi = \sum_{k=0}^{\infty} \frac{1}{16^k} \left( \frac{4}{8k+1} - \frac{2}{8k+4} - \frac{1}{8k+5} - \frac{1}{8k+6} \right) \]
+        </div>
+        <div class="formula-container">
+            \[ \tan x = \sum_{n=1}^{\infty} \frac{B_{2n} (-4)^n (1-4^n)}{(2n)!} x^{2n-1} \]
+        </div>
+        <div class="formula-container">
+            \[ \frac{\pi}{2} = \prod_{n=1}^{\infty} \frac{4n^2}{4n^2 - 1} \]
+        </div>
+    </div>
+
+    <script>
+        function showSection(id, btn) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            btn.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
