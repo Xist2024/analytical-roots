@@ -82,7 +82,7 @@
         </div>
         <div class="formula-container">
             \[ ax^5 + bx^4 + cx^3 + dx^2 + ex + f = 0 \]
-            \[ x = \sum_{n_2, n_3, n_4, n_5=0}^{\infty} \frac{(-1)^{1+n_2+n_3+n_4+n_5} \Gamma(n_2+2n_3+3n_4+4n_5+1)}{\Gamma(n_3+2n_4+3n_5+2) n_2! n_3! n_4! n_5!} \frac{f^{n_3+2n_4+3n_5+1} d^{n_2} c^{n_3} b^{n_4} a^{n_5}}{e^{n_2+2n_3+3n_4+4n_5+1}} \]
+            \[ x = \sum_{n_2, n_3, n_4, n_5=0}^{\infty} \frac{(-1)^{1+n_2+2n_3+3n_4+4n_5} \Gamma(2n_2+3n_3+4n_4+5n_5+1)}{\Gamma(n_2+2n_3+3n_4+4n_5+2) n_2! n_3! n_4! n_5!} \frac{f^{n_2+2n_3+3n_4+4n_5+1} d^{n_2} c^{n_3} b^{n_4} a^{n_5}}{e^{2n_2+3n_3+4n_4+5n_5+1}} \]
         </div>
         <div class="formula-container">
             \[ \sin x = a \]
@@ -119,6 +119,9 @@
         </div>
         <div class="formula-container">
             \[ \int (\arcsin x)^n \, dx = x \sum_{k=0}^{\lfloor n/2 \rfloor} \frac{(-1)^k n!}{(n-2k)!} (\arcsin x)^{n-2k} + \sqrt{1-x^2} \sum_{k=0}^{\lfloor (n-1)/2 \rfloor} \frac{(-1)^k n!}{(n-2k-1)!} (\arcsin x)^{n-2k-1} + C \]
+        </div>
+        <div class="formula-container">
+            \[ \int x^x dx = \sum_{n=0}^{\infty} \frac{1}{n!} \left( \frac{x^{n+1}}{n+1} \sum_{k=0}^{n} (-1)^k \frac{n!}{(n-k)!(n+1)^k} (\ln x)^{n-k} \right) + C \]
         </div>
         <div class="formula-container">\[ y' + p(x)y = q(x) \]\[ y = e^{-\int p(x)dx} \left( \int q(x)e^{\int p(x)dx} dx + C \right) \]</div>
         <div class="formula-container">\[ y' + p(x)y = q(x)y^n \]\[ y = \left( e^{-(1-n)\int p(x)dx} \left( (1-n)\int q(x)e^{(1-n)\int p(x)dx} dx + C \right) \right)^{\frac{1}{1-n}} \]</div>
@@ -250,6 +253,16 @@
             btn.classList.add('active');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        // 禁用右键菜单
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // 禁用F12
+        document.addEventListener('keydown', event => {
+            if (event.key === 'F12' || event.keyCode === 123) {
+                event.preventDefault();
+            }
+        });
     </script>
 </body>
 </html>
