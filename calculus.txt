@@ -1,0 +1,18 @@
+I_n = \int \frac{1}{x^n + 1} dx
+J_n = \int \frac{1}{x^n - 1} dx
+I_{2n+1} = \frac{1}{2n+1} \left[ \ln|x+1| + 2\sum_{k=1}^n \sin\left(\frac{(2k-1)\pi}{2n+1}\right) \arctan\left(x \csc\frac{(2k-1)\pi}{2n+1} - \cot\frac{(2k-1)\pi}{2n+1}\right) - \sum_{k=1}^n \cos\left(\frac{(2k-1)\pi}{2n+1}\right) \ln\left(x^2 - 2x\cos\frac{(2k-1)\pi}{2n+1} + 1\right) \right] + C
+I_{2n} = \frac{1}{2n} \left[ 2\sum_{k=1}^n \sin\left(\frac{(2k-1)\pi}{2n}\right) \arctan\left(x \csc\frac{(2k-1)\pi}{2n} - \cot\frac{(2k-1)\pi}{2n}\right) - \sum_{k=1}^n \cos\left(\frac{(2k-1)\pi}{2n}\right) \ln\left(x^2 - 2x\cos\frac{(2k-1)\pi}{2n} + 1\right) \right] + C
+J_{2n+1} = \frac{1}{2n+1} \left[ \ln|x-1| + \sum_{k=1}^n \cos\left(\frac{2k\pi}{2n+1}\right) \ln\left(x^2 - 2x\cos\frac{2k\pi}{2n+1} + 1\right) - 2\sum_{k=1}^n \sin\left(\frac{2k\pi}{2n+1}\right) \arctan\left(x \csc\frac{2k\pi}{2n+1} - \cot\frac{2k\pi}{2n+1}\right) \right] + C
+J_{2n} = \frac{1}{2n} \left[ \ln\left|\frac{x-1}{x+1}\right| + \sum_{k=1}^{n-1} \cos\left(\frac{k\pi}{n}\right) \ln\left(x^2 - 2x\cos\frac{k\pi}{n} + 1\right) - 2\sum_{k=1}^{n-1} \sin\left(\frac{k\pi}{n}\right) \arctan\left(x \csc\frac{k\pi}{n} - \cot\frac{k\pi}{n}\right) \right] + C
+
+\int x^x dx = \sum_{n=0}^{\infty} \frac{1}{n!} \left( \frac{x^{n+1}}{n+1} \sum_{k=0}^{n} (-1)^k \frac{n!}{(n-k)!(n+1)^k} (\ln x)^{n-k} \right) + C
+
+\int (\arcsin x)^n \, dx = x \sum_{k=0}^{\lfloor n/2 \rfloor} \frac{(-1)^k n!}{(n-2k)!} (\arcsin x)^{n-2k} + \sqrt{1-x^2} \sum_{k=0}^{\lfloor (n-1)/2 \rfloor} \frac{(-1)^k n!}{(n-2k-1)!} (\arcsin x)^{n-2k-1} + C
+
+\int \frac{x^{m-1}\mathrm{d}x}{1 - x^{2n}} = \frac{(-1)^{m+1} \ln|1+x| - \ln|1-x|}{2n} + \frac{1}{n} \sum_{k=1}^{n-1} \sin\left(\frac{mk\pi}{n}\right) \arctan\frac{x - \cos\frac{k\pi}{n}}{\sin\frac{k\pi}{n}} - \frac{1}{2n} \sum_{k=1}^{n-1} \cos\left(\frac{mk\pi}{n}\right) \ln\left(x^2 - 2x\cos\frac{k\pi}{n} + 1\right)
+
+\int x^m (\ln x)^n dx = \sum_{k=0}^n \frac{(-1)^k \cdot n!}{(n-k)! \cdot (m+1)^{k+1}} x^{m+1} (\ln x)^{n-k} + C
+
+\int x^n e^{ax} dx = \frac{e^{ax}}{a} \sum_{k=0}^n (-1)^k \frac{n!}{(n-k)!a^k} x^{n-k} + C
+
+\int e^{ax} \sin(bx) dx = \frac{e^{ax}}{a^2 + b^2}(a \sin bx - b \cos bx) + C

@@ -1,0 +1,85 @@
+x^x y^y = z^z \quad (n > 0)
+\left\{ \begin{array}{l} x = 2^{2^{n+1}(2^n - n - 1) + 2n} (2^n - 1)^{2^{n+1} - 2} \\ y = 2^{2^{n+1}(2^n - n - 1)} (2^n - 1)^{2^{n+1}} \\ z = 2^{2^{n+1}(2^n - n - 1) + n + 1} (2^n - 1)^{2^{n+1} - 1} \end{array} \right.
+
+x^p + y^p = z^{p-1}
+\left\{ \begin{array}{l} x = (n^p + 1)^{p-2} \\ y = n(n^p + 1)^{p-2} \\ z = (n^p + 1)^{p-1} \end{array} \right. \quad \left\{ \begin{array}{l} x = \left(m(m^{p^2-2p} + n^{p^2-2p})\right)^{p-2} \\ y = \left(n(m^{p^2-2p} + n^{p^2-2p})\right)^{p-2} \\ z = \left(m^{p^2-2p} + n^{p^2-2p}\right)^{p-1} \end{array} \right.
+
+
+x^2 + y^2 = z^2
+\left\{ \begin{array}{l} x = m^2 - n^2 \\ y = 2mn \\ z = m^2 + n^2 \end{array} \right.
+
+x^2 + y^2 = z^4
+\left\{ \begin{array}{l} x = 4mn(m^2 - n^2) \\ y = 6m^2n^2 - m^4 - n^4 \\ z = m^2 + n^2 \end{array} \right.
+
+\frac{1}{x^2} + \frac{1}{y^2} = \frac{1}{z^2} + \frac{1}{w^2}
+\left\{ \begin{array}{l} x = 4n^4 - 2n^2 \\ y = 2n^2 - 1 \\ z = 2n^3 - n \\ w = 2n^2 \end{array} \right.
+
+\begin{cases} x^2 + y^2 = p^2 \\ x^2 + z^2 = q^2 \\ y^2 + z^2 = r^2 \end{cases}
+\left\{ \begin{array}{l} x = (m^2 - n^2) \cdot |16m^2n^2 - (m^2 + n^2)^2| \\ y = 2mn \cdot |4(m^2 - n^2)^2 - (m^2 + n^2)^2| \\ z = 8mn(m^2 - n^2)(m^2 + n^2) \end{array} \right.
+
+
+x^2 + y^2 + z^2 = w^2
+\left\{ \begin{array}{l} x = a^2 + b^2 - c^2 - d^2 \\ y = 2(bc - ad) \\ z = 2(bd + ac) \\ w = a^2 + b^2 + c^2 + d^2 \end{array} \right.
+
+x^2 - xy + y^2 = z^2
+\left\{ \begin{array}{l} x = -m^2 - 2mn + 3n^2 \\ y = -m^2 + 2mn + 3n^2 \\ z = m^2 + 3n^2 \end{array} \right. \quad \left\{ \begin{array}{l} x = 2mn + n^2 \\ y = m^2 + 2mn \\ z = m^2 + mn + n^2 \end{array} \right. \quad \left\{ \begin{array}{l} x = m^2 - n^2 \\ y = m^2 + 2mn \\ z = m^2 + mn + n^2 \end{array} \right.
+
+x^2 + py^2 = z^3
+\left\{ \begin{array}{l} x = m^3 - 3pm n^2 \\ y = 3m^2n - pn^3 \\ z = m^2 + pn^2 \end{array} \right.
+
+x^3 + y^3 = z^3 + w^3
+\left\{ \begin{array}{l} x = 1 - (m - 3n)(m^2 + 3n^2) \\ y = (m + 3n)(m^2 + 3n^2) - 1 \\ z = (m + 3n) - (m^2 + 3n^2)^2 \\ w = (m^2 + 3n^2)^2 - (m - 3n) \end{array} \right.
+
+x^3 + y^3 + z^3 = w^3
+\left\{ \begin{array}{l} x = 3m^2 + 5mn - 5n^2 \\ y = 4m^2 - 4mn + 6n^2 \\ z = 5m^2 - 5mn - 3n^2 \\ w = 6m^2 - 4mn + 4n^2 \end{array} \right. \quad \left\{ \begin{array}{l} x = 3ab^6d^2 - ac^2 - 9a^4cd - 21a^7d^2 \\ y = ac^2 + 9a^4cd - 6ab^3cd + 21a^7d^2 - 27a^4b^3d^2 + 6ab^6d^2 \\ z = bc^2 + 12a^3bcd - 3b^4cd + 33a^6bd^2 - 18a^3b^4d^2 + 3b^7d^2 \\ w = bc^2 + 6a^3bcd - 3b^4cd + 6a^6bd^2 - 9a^3b^4d^2 + 3b^7d^2 \end{array} \right. \quad \left\{ \begin{array}{l} x = ab^6c^2 + 9a^4cd - 3ad^2 - 7a^7c^2 \\ y = 7a^7c^2 + 9a^4b^3c^2 + 2ab^6c^2 - 9a^4cd - 6ab^3cd + 3ad^2 \\ z = 2a^6bc^2 + 3a^3b^4c^2 + b^7c^2 - 6a^3bcd - 3b^4cd + 3bd^2 \\ w = 11a^6bc^2 + 6a^3b^4c^2 + b^7c^2 - 12a^3bcd - 3b^4cd + 3bd^2 \end{array} \right.
+.
+
+x^3 + y^4 + z^5 = w^6
+\left\{ \begin{array}{l} x = (n^6 - 2)^8 \\ y = (n^6 - 2)^6 \\ z = (n^6 - 2)^5 \\ w = n(n^6 - 2)^4 \end{array} \right.
+
+x^4 + y^4 = z^4 + w^4
+\left\{ \begin{array}{l} x = m^7 + m^5n^2 - 2m^3n^4 + 3m^2n^5 + mn^6 \\ y = m^6n - 3m^5n^2 - 2m^4n^3 + m^2n^5 + n^7 \\ z = m^7 + m^5n^2 - 2m^3n^4 - 3m^2n^5 + mn^6 \\ w = m^6n + 3m^5n^2 - 2m^4n^3 + m^2n^5 + n^7 \end{array} \right.
+
+x^4 + y^4 + z^4 = w^4
+\left\{ \begin{array}{l} x = 358n^2 - 82n + 3 \\ y = 358n^2 + 82n + 3 \\ z = 224n \\ w = 426n^2 + 15 \end{array} \right.
+
+x^5 + y^5 + z^5 + u^5 = w^5
+\left\{ \begin{array}{l} x = 27 \\ y = 84 \\ z = 110 \\ u = 133 \\ w = 144 \end{array} \right. \quad \left\{ \begin{array}{l} x = 55 \\ y = 3183 \\ z = 28969 \\ u = 85282 \\ w = 85359 \end{array} \right. \quad \left\{ \begin{array}{l} x = 14132 \\ y = 2206231 \\ z = 2983002 \\ u = 3455760 \\ w = 4034503 \end{array} \right.
+
+x^5 + y^5 + z^5 + u^5 + v^5 = w^5
+\left\{ \begin{array}{l} x = 75m^5 - n^5 \\ y = 25m^5 + n^5 \\ z = -25m^5 + n^5 \\ u = 10m^2n^3 \\ v = 50m^4n \\ w = 75m^5 + n^5 \end{array} \right.
+
+
+
+\begin{cases} a + b + c = x + y + z \\ abc = xyz \end{cases}
+\left\{ \begin{array}{l} a = m(-mn + pq) \\ b = n(-mn + pq) \\ c = pq(-m - n + p + q) \\ x = p(-mn + pq) \\ y = q(-mn + pq) \\ z = mn(-m - n + p + q) \end{array} \right.
+
+(x+y+z)(-x+y+z)(x-y+z)(x+y-z) = 16
+\left\{ \begin{array}{l} x = \frac{5n^4 - 4n^2 + 4}{n^5 - 4n} \\ y = \frac{n^5 - 4n^3 + 20n}{2n^4 - 8} \\ z = \frac{n^2 + 2}{2n} \end{array} \right.
+
+x^{x^y} = y
+\left\{ \begin{array}{l} x = \frac{1}{16} \\ y = \frac{1}{2} \end{array} \right. \quad \left\{ \begin{array}{l} x = \frac{1}{16} \\ y = \frac{1}{4} \end{array} \right. \quad \left\{ \begin{array}{l} x = \frac{1}{n^n} \\ y = \frac{1}{n} \end{array} \right.
+
+x^x = y^y \quad (x \ne y)
+\left\{ \begin{array}{l} x = \left( \frac{n}{n+1} \right)^n \\ y = \left( \frac{n}{n+1} \right)^{n+1} \end{array} \right.
+
+x^y = y^x \quad (x \ne y)
+\left\{ \begin{array}{l} x = \left( 1 + \frac{1}{n} \right)^n \\ y = \left( 1 + \frac{1}{n} \right)^{n+1} \end{array} \right.
+
+x^y = xy
+\left\{ \begin{array}{l} x = \left( 1 + \frac{1}{n} \right)^n \\ y = 1 + \frac{1}{n} \end{array} \right.
+
+
+\frac{(x+1)!}{(y+1)!(x-y)!} = \frac{x!}{(y+2)!(x-y-2)!} \quad (n \ge 0, n \in \mathbb{Z})
+\left\{ \begin{array}{l} x = \frac{\left(\frac{1+\sqrt{5}}{2}\right)^{2n+2} - \left(\frac{1-\sqrt{5}}{2}\right)^{2n+2}}{\sqrt{5}} \cdot \frac{\left(\frac{1+\sqrt{5}}{2}\right)^{2n+3} - \left(\frac{1-\sqrt{5}}{2}\right)^{2n+3}}{\sqrt{5}} - 1 \\ y = \frac{\left(\frac{1+\sqrt{5}}{2}\right)^{2n} - \left(\frac{1-\sqrt{5}}{2}\right)^{2n}}{\sqrt{5}} \cdot \frac{\left(\frac{1+\sqrt{5}}{2}\right)^{2n+3} - \left(\frac{1-\sqrt{5}}{2}\right)^{2n+3}}{\sqrt{5}} - 1 \end{array} \right.
+
+
+
+
+
+
+
+\begin{cases} a_1x + b_1y + c_1z = d_1 \\ a_2x + b_2y + c_2z = d_2 \\ a_3x + b_3y + c_3z = d_3 \end{cases}
+x = \frac{d_1(b_2c_3 - b_3c_2) + b_1(c_2d_3 - c_3d_2) + c_1(d_2b_3 - d_3b_2)}{a_1(b_2c_3 - b_3c_2) + b_1(c_2a_3 - c_3a_2) + c_1(a_2b_3 - a_3b_2)}
+y = \frac{a_1(d_2c_3 - d_3c_2) + d_1(c_2a_3 - c_3a_2) + c_1(a_2d_3 - a_3d_2)}{a_1(b_2c_3 - b_3c_2) + b_1(c_2a_3 - c_3a_2) + c_1(a_2b_3 - a_3b_2)}
+z = \frac{a_1(b_2d_3 - b_3d_2) + b_1(d_2a_3 - d_3a_2) + d_1(a_2b_3 - a_3b_2)}{a_1(b_2c_3 - b_3c_2) + b_1(c_2a_3 - c_3a_2) + c_1(a_2b_3 - a_3b_2)}
