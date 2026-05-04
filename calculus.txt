@@ -5,6 +5,14 @@ I_{2n} = \frac{1}{2n} \left[ 2\sum_{k=1}^n \sin\left(\frac{(2k-1)\pi}{2n}\right)
 J_{2n+1} = \frac{1}{2n+1} \left[ \ln|x-1| + \sum_{k=1}^n \cos\left(\frac{2k\pi}{2n+1}\right) \ln\left(x^2 - 2x\cos\frac{2k\pi}{2n+1} + 1\right) - 2\sum_{k=1}^n \sin\left(\frac{2k\pi}{2n+1}\right) \arctan\left(x \csc\frac{2k\pi}{2n+1} - \cot\frac{2k\pi}{2n+1}\right) \right] + C
 J_{2n} = \frac{1}{2n} \left[ \ln\left|\frac{x-1}{x+1}\right| + \sum_{k=1}^{n-1} \cos\left(\frac{k\pi}{n}\right) \ln\left(x^2 - 2x\cos\frac{k\pi}{n} + 1\right) - 2\sum_{k=1}^{n-1} \sin\left(\frac{k\pi}{n}\right) \arctan\left(x \csc\frac{k\pi}{n} - \cot\frac{k\pi}{n}\right) \right] + C
 
+\int \sin^{2m} x \,dx = \frac{1}{2^{2m}} \binom{2m}{m} x + \frac{(-1)^m}{2^{2m-1}} \sum_{k=0}^{m-1} (-1)^k \binom{2m}{k} \frac{\sin((2m-2k)x)}{2m-2k} + C
+\int \sin^{2m+1} x \,dx = \frac{(-1)^{m+1}}{2^{2m}} \sum_{k=0}^m (-1)^k \binom{2m+1}{k} \frac{\cos((2m-2k+1)x)}{2m-2k+1} + C
+\int \cos^{2m} x \,dx = \frac{1}{2^{2m}} \binom{2m}{m} x + \frac{1}{2^{2m-1}} \sum_{k=0}^{m-1} \binom{2m}{k} \frac{\sin((2m-2k)x)}{2m-2k} + C
+\int \cos^{2m+1} x \,dx = \frac{1}{2^{2m}} \sum_{k=0}^m \binom{2m+1}{k} \frac{\sin((2m-2k+1)x)}{2m-2k+1} + C
+
+\int x^m \sin(bx) \,dx = \sum_{k=0}^{\lfloor (m-1)/2 \rfloor} (-1)^k \frac{m!}{(m-2k-1)! b^{2k+2}} x^{m-2k-1} \sin(bx) - \sum_{k=0}^{\lfloor m/2 \rfloor} (-1)^k \frac{m!}{(m-2k)! b^{2k+1}} x^{m-2k} \cos(bx) + C
+\int x^m \cos(bx) \,dx = \sum_{k=0}^{\lfloor m/2 \rfloor} (-1)^k \frac{m!}{(m-2k)! b^{2k+1}} x^{m-2k} \sin(bx) + \sum_{k=0}^{\lfloor (m-1)/2 \rfloor} (-1)^k \frac{m!}{(m-2k-1)! b^{2k+2}} x^{m-2k-1} \cos(bx) + C
+
 \int x^x dx = \sum_{n=0}^{\infty} \frac{1}{n!} \left( \frac{x^{n+1}}{n+1} \sum_{k=0}^{n} (-1)^k \frac{n!}{(n-k)!(n+1)^k} (\ln x)^{n-k} \right) + C
 
 \int (\arcsin x)^n \, dx = x \sum_{k=0}^{\lfloor n/2 \rfloor} \frac{(-1)^k n!}{(n-2k)!} (\arcsin x)^{n-2k} + \sqrt{1-x^2} \sum_{k=0}^{\lfloor (n-1)/2 \rfloor} \frac{(-1)^k n!}{(n-2k-1)!} (\arcsin x)^{n-2k-1} + C
