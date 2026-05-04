@@ -1,21 +1,23 @@
-(x+y)^n = x^n + nx^{n-1}y + \frac{n(n-1)}{2!}x^{n-2}y^2 + \dots + \frac{n!}{k!(n-k)!}x^{n-k}y^k + \dots + y^n
-(x+y)^n = \sum_{k=0}^n \frac{n!}{k!(n-k)!} x^{n-k} y^k
-
 \zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s} = \prod_{p \in \text{primes}} \frac{1}{1 - p^{-s}}
 \zeta(2n) = \frac{(-1)^{n+1} B_{2n} (2\pi)^{2n}}{2(2n)!}
+
+F_m^{(n)} = \sum_{i=0}^{\lfloor \frac{m-1}{n+1} \rfloor} \binom{m-1-ni}{i} (-1)^i 2^{m-1-(n+1)i} - \sum_{i=0}^{\lfloor \frac{m-2}{n+1} \rfloor} \binom{m-2-ni}{i} (-1)^i 2^{m-2-(n+1)i}
 
 B_n = \sum_{k=0}^{n} \frac{1}{k+1} \sum_{j=0}^{k} (-1)^j \frac{k!}{j!(k-j)!} j^n
 
 i^{2^{-n}} = \sum_{k=0}^{\infty} \frac{(-1)^k \pi^{2k}}{2^{2k(n+1)} (2k)!} + i \sum_{k=0}^{\infty} \frac{(-1)^k \pi^{2k+1}}{2^{(2k+1)(n+1)} (2k+1)!}
 
+(x+y)^n = x^n + nx^{n-1}y + \frac{n(n-1)}{2!}x^{n-2}y^2 + \dots + \frac{n!}{k!(n-k)!}x^{n-k}y^k + \dots + y^n
+(x+y)^n = \sum_{k=0}^n \frac{n!}{k!(n-k)!} x^{n-k} y^k
+
 \ln(n!) = n \ln n - n + \frac{1}{2} \ln(2\pi n) + \sum_{k=1}^{\infty} \frac{B_{2k}}{2k(2k-1)n^{2k-1}}
 
 \sin x = x \prod_{n=1}^{\infty} \left(1 - \frac{x^2}{n^2\pi^2}\right)
 
+\tan x = \sum_{n=1}^{\infty} \frac{B_{2n} (-4)^n (1-4^n)}{(2n)!} x^{2n-1}
+
 \frac{1}{\pi} = \frac{2\sqrt{2}}{9801} \sum_{k=0}^{\infty} \frac{(4k)!(1103+26390k)}{(k!)^4 396^{4k}}
 
 \pi = \sum_{k=0}^{\infty} \frac{1}{16^k} \left( \frac{4}{8k+1} - \frac{2}{8k+4} - \frac{1}{8k+5} - \frac{1}{8k+6} \right)
-
-\tan x = \sum_{n=1}^{\infty} \frac{B_{2n} (-4)^n (1-4^n)}{(2n)!} x^{2n-1}
 
 \frac{\pi}{2} = \prod_{n=1}^{\infty} \frac{4n^2}{4n^2 - 1}
